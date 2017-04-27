@@ -5,13 +5,13 @@ import (
 	"sync"
 )
 
-// my first (perhaps niave) attempt is to simply build a graph of the problem,
-// then do a "shortest path" search from beginning to end node
+// my first (perhaps niave) attempt
 
-// always 100 tile board
+// problem given was always 100 tile board
+// but I tested to about 100000
 
-// brute force approach
-// a goroutine for each roll (exponential ^6)
+// for now, a brute force approach
+// a goroutine for each roll (yikes)
 // we can do 2 things to trim the solution space
 // 1. report 1st found path, stop computation on all gorutines that already have a longer path
 // 2. keep history of which nodes we've visited in a path so that we know to prevent cycles
